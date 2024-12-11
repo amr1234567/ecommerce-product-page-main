@@ -1,0 +1,29 @@
+:host {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  >div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    border-radius: 7px;
+    overflow: hidden;
+    gap: 2px;
+
+    * {
+      background-color: rgba(128, 128, 128, 0.595);
+    }
+
+    >p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 1rem;
+    }
+  }
+
+
+}

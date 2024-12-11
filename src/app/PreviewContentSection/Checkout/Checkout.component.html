@@ -1,0 +1,6 @@
+<div>
+    <app-update-quantity-button (onUpdate)="updateInitialQuantity(1)" icon="/images/icon-plus.svg" />
+    <p>{{changableQueantity()}}</p>
+    <app-update-quantity-button (onUpdate)="updateInitialQuantity(-1)" icon="/images/icon-minus.svg" />
+</div>
+<app-add-to-cart-button (onUpdate)="updateQuantityWithAdd()" icon="/images/icon-cart.svg" />

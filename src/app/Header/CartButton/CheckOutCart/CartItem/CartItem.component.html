@@ -1,0 +1,12 @@
+<div>
+    <img class="product-image" [src]="productItem().imageThumbnail" alt="">
+    <div class="content">
+        <p>{{productItem().name}}</p>
+        <p class="price-details">
+            <span class="price">{{productItem().price}} </span>
+            <span class="quantity">×{{item().quantity}}</span>
+            <span class="finalPrice">{{finalPrice()}}</span>
+        </p>
+    </div>
+</div>
+<img class="delete-image" src="/images/icon-delete.svg" alt="" (click)="onDelete()">

@@ -1,0 +1,17 @@
+<div class="header">
+    Cart
+</div>
+@if (cartItems().length > 0) {
+<div class="main">
+    <div>
+        @for(cart of cartItems(); track cart.productid){
+        <app-cart-item [item]="cart" (delete)="emptyCartItem($event)" />
+        }
+    </div>
+    <button (click)="checkOut()">Check Out</button>
+</div>
+}@else{
+<div class="main-empty">
+    <p>Your cart is empty</p>
+</div>
+}

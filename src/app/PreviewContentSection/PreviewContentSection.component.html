@@ -1,0 +1,26 @@
+@if(productItem()){
+<div class="main">
+    <div class="content">
+        <h6>Sneaker Company</h6>
+        <h1>{{productItem()?.name}}</h1>
+        <p>{{productItem()?.description}}</p>
+        <div class="price">
+            <div class="price-details">
+                <span class="actual-price">
+                    {{ (productItem()?.price ?? 0 | appDiscountPrice:(productItem()?.discount ?? 0)) | currency }}
+                </span>
+                <span class="discount">{{productItem()?.discount }}%</span>
+            </div>
+            <span class="final-price">
+                {{productItem()?.price | currency}}
+            </span>
+        </div>
+    </div>
+    <div class="buttons">
+        <app-checkout [cartItem]="cartItem()" [itemId]="productItemId()" />
+    </div>
+</div>
+
+}@else {
+<p>Loading...</p>
+}

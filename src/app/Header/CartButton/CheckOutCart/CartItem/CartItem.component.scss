@@ -1,0 +1,53 @@
+:host {
+  display: flex;
+  width: 100%;
+  gap: 0.6rem;
+  align-items: center;
+  color: gray;
+  justify-content: space-between;
+  font-size: smaller;
+
+  >div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .product-image {
+      width: 20%;
+      border-radius: 10px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .price-details {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        .finalPrice {
+          font-weight: 700;
+          color: black;
+        }
+
+        .quantity {
+          font-weight: 700;
+        }
+      }
+    }
+
+
+  }
+
+  .delete-image {
+    width: fit-content;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+}

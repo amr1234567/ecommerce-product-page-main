@@ -1,0 +1,17 @@
+<img (click)="ToggleImage()" [src]="prodcutSelected()?.image" [alt]="prodcutSelected()?.name">
+<ng-template [appImagePerview]="showPreviewImage()">
+    <div class="dialog">
+        <div id="close-container" class="close" (click)="ToggleImage()">
+            <img src="/images/icon-close.svg" alt="">
+        </div>
+        <img id="image-preview" [src]="prodcutSelected()?.image" [alt]="prodcutSelected()?.name">
+    </div>
+</ng-template>
+<div>
+    @for (product of products(); track product.id) {
+    <div [class.active]="product.id === prodcutSelected()?.id">
+        <img [class.active]="product.id === prodcutSelected()?.id" [src]="product.imageThumbnail" [alt]="product.name"
+            (click)="onSelect(product.id)">
+    </div>
+    }
+</div>

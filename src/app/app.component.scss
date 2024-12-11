@@ -1,0 +1,15 @@
+.app {
+    width: 90%;
+    min-height: 85vh;
+    height: fit-content;
+    padding: 1rem 4rem;
+    margin: 5vh auto;
+    background-color: aliceblue;
+
+    main {
+        display: flex;
+        gap: 5%;
+        width: 90%;
+        margin: 0 auto;
+    }
+}

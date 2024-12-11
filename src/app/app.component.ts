@@ -1,13 +1,19 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, signal } from '@angular/core';
+import { HeaderComponent } from "./Header/Header.component";
+import { PreviewContentSectionComponent } from "./PreviewContentSection/PreviewContentSection.component";
+import { ImagePerviewsComponent } from "./ImagePerviews/ImagePerviews.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [HeaderComponent, PreviewContentSectionComponent, ImagePerviewsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'ang-project';
+  selectedProductId = signal(1)
+
+  selectProduct(productId: number) {
+    this.selectedProductId.set(productId);
+  }
 }

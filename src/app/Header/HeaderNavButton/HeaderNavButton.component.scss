@@ -1,0 +1,20 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+
+  &.active {
+    border-bottom: 3px solid orange;
+    color: black;
+    font-weight: 600;
+  }
+
+  &:hover {
+    border-bottom: 3px solid orange;
+    color: black;
+    font-weight: 600;
+  }
+}
